@@ -13,8 +13,8 @@ function App() {
     <div className="container">
       <h3>سوالی برایتان پیش آمده</h3>
       <div className="info">
-        {questions.map((questions)=> {
-          return <Question />
+        {questions.map((question)=> {
+          return <Question key={question.id} {...question} />
         })}
         
       </div>
