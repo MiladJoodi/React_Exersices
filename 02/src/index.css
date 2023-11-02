@@ -9,5 +9,9 @@
 body {
   direction: rtl;
   font-family: 'vazir' !important;
+  background-color: rgb(73, 224, 149) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
-
