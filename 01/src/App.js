@@ -1,11 +1,18 @@
+import { useState } from "react";
 import "./App.css";
 import { Icon } from "react-icons-kit";
 import { eye } from "react-icons-kit/feather/eye";
 
 function App() {
 
-  const handleClick = ()=>{
+  const [type, setType] = useState('password')
 
+  const handleClick = ()=>{
+    if(type === 'password'){
+      setType('text')
+    }else{
+      setType('password')
+    }
   }
 
   return (
