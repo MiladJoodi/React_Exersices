@@ -2,16 +2,20 @@ import { useState } from "react";
 import "./App.css";
 import { Icon } from "react-icons-kit";
 import { eye } from "react-icons-kit/feather/eye";
+import { eyeOff } from "react-icons-kit/feather/eyeOff";
 
 function App() {
 
   const [type, setType] = useState('password')
+  const [icon, setIcon] = useState(eyeOff)
 
   const handleClick = ()=>{
     if(type === 'password'){
-      setType('text')
+      setType('text');
+      setIcon(eye)
     }else{
-      setType('password')
+      setType('password');
+      setIcon(eyeOff)
     }
   }
 
@@ -19,9 +23,9 @@ function App() {
     <div className="wrapper">
       <div className="input-fields">
         <span onClick={handleClick}>
-          <Icon icon={eye} size={25} />
+          <Icon icon={icon} size={25} />
         </span>
-        <input type="password" />
+        <input type={type} />
       </div>
     </div>
   );
