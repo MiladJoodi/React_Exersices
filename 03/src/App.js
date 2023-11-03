@@ -1,22 +1,39 @@
+import { useState } from "react";
+import data from './data'
 import "./App.css";
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [text, setText] = useState([]);
 
-  
+  const handleSubmit = (e)=> {
+    e.preventDefault();
+    let amount = parseInt(count)
+    // console.log(typeof amount);
+    if(count <= 0){
+      amount = 1
+    } else if(count > 4){
+      amount = 4
+    }
+    setText(data.slice(0, amount));
+  };
+
   return (
     <div className="section-center">
-        <h4>لورم ساز خوشگل و زیبا</h4>
-        <form className="lorem">
-          <label htmlFor="total">تعداد پاراگراف</label>
-          <input type="text" />
-          <button type="submit">بساز</button>
-            
-        </form>
+      <h4>لورم ساز خوشگل و زیبا</h4>
+      <form className="lorem" onSubmit={handleSubmit}>
+        <label htmlFor="total">تعداد پاراگراف:</label>
+        <input type="number" name="total" value={count} onChange={(e)=> setCount(e.target.value)} />
+        <button type="submit">بساز</button>
+      </form>
 
-        <article className="lorem-text">
-          <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
-        </article>
-
+      <article className="lorem-text">
+        {
+          text.map((item, index)=> {
+            return <p key={index}>{item}</p>
+          })
+        }
+      </article>
     </div>
   );
 }
