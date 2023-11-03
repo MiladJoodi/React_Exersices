@@ -1,0 +1,42 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+body {
+  direction: rtl;
+  font-family: 'vazir' !important;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: rgb(235, 235, 235) !important;
+}
+.section-center{
+  width: 600px;
+}
+.section-center h4{
+  font-size: 25px;
+  padding: 30px 0;
+}
+.section-center input{
+  border: 1px solid rgb(235, 235, 235);
+  padding: 7px;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+.section-center button{
+  border: none;
+  background: #c00;
+  margin-right: 20px;
+  width: 100px;
+  color: #fff;
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 5px;
+}
+.section-center p{
+  margin-top: 40px;
+}
