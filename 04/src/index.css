@@ -1,28 +1,29 @@
-*{
+* {
   padding: 0;
   margin: 0;
   text-decoration: none;
   list-style: none;
   outline: none;
 }
+
 body {
   direction: rtl;
   font-family: 'vazir' !important;
-  background: #f8f8f8 !important;
+  background: #dfdfdf !important;
 }
 
-nav{
+nav {
   display: flex;
   align-items: center;
   justify-content: center;
   background: #fff;
-  box-shadow: 0 0 10px rgba(117,117,117,.3);
+  box-shadow: 0 0 10px rgba(117, 117, 117, .3);
   height: 65px;
   padding: 0 20px;
   position: relative;
 }
 
-.container{
+.container {
   width: 1400px;
   display: flex;
   margin: auto;
@@ -30,17 +31,17 @@ nav{
   justify-content: space-between;
 }
 
-.nav-logo{
+.nav-logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.nav-logo img{
+.nav-logo img {
   width: 75px;
 }
 
-.nav-logo .nav-toggle{
+.nav-logo .nav-toggle {
   background: transparent;
   border: 0;
   width: 40px;
@@ -49,40 +50,68 @@ nav{
   cursor: pointer;
   display: none;
 }
-
-.nav-links .list{
+.nav-links{
+  transition: all 0.3s ease;
+}
+.nav-links .list {
   display: flex;
   align-items: center;
 }
-.nav-links .list li{
+
+.nav-links .list li {
   margin: 0 10px;
 }
+
 .nav-links .list li a {
   color: #333;
   font-size: 17px;
 }
-.nav-social{
+
+.nav-social {
   display: flex;
 }
-.nav-social li{
+
+.nav-social li {
   margin-left: 10px;
 }
-.nav-social li a{
+
+.nav-social li a {
   color: #333;
 }
+
 @media screen and (max-width: 767px) {
-  .nav-logo{
+  .nav-logo {
     width: 100%;
   }
-  .nav-toggle{
-    display: block;
+
+  .nav-toggle {
+    display: block !important;
   }
-  .nav-links{
+
+  .nav-links {
     position: absolute;
     right: 0;
     left: 0;
     top: 65px;
-    height: 300px;
-    background: rgb(207, 125, 125);
+    /* height: auto; */
+    height: 0;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    border-top: 1px solid rgb(245, 245, 245)
+  }
+
+  .nav-links .list {
+    display: block;
+  }
+
+  .nav-links .list li {
+    padding: 15px 20px;
+  }
+
+  .nav-social {
+    display: none;
+  }
+  .active{
+    height: 15rem;
   }
 }

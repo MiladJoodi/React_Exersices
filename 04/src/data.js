@@ -8,17 +8,17 @@ export const links = [
         text: 'خانه'
     },
     {
-        id: 2,
-        url: '/',
-        text: 'درباره ما'
-    },
-    {
-        id: 3,
+        id: 1,
         url: '/',
         text: 'تماس با ما'
     },
     {
-        id: 4,
+        id: 1,
+        url: '/',
+        text: 'درباره ما'
+    },
+    {
+        id: 1,
         url: '/',
         text: 'پروژه های ما'
     },
@@ -27,22 +27,23 @@ export const links = [
 export const socials = [
     {
         id: 1,
-        url: 'http://twitter.com',
+        url: '/',
         icon: <FaBehance />
     },
     {
         id: 2,
-        url: 'http://twitter.com',
+        url: '/',
         icon: <FaFacebook />
     },
     {
         id: 3,
-        url: 'http://twitter.com',
+        url: '/',
         icon: <FaLinkedin />
     },
     {
         id: 4,
-        url: 'http://twitter.com',
+        url: '/',
         icon: <FaTwitter />
     },
+
 ]
