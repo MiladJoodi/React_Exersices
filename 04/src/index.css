@@ -101,7 +101,7 @@ nav {
   }
 
   .nav-links .list {
-    display: block;
+    display: block !important;
   }
 
   .nav-links .list li {
