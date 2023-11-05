@@ -4,6 +4,7 @@ import { Icon } from "react-icons-kit";
 import { eye } from "react-icons-kit/feather/eye";
 import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import Navbar from './Components/Navbar/Navbar'
+import header from './header.png'
 
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
   
 
   return (
-    <div>
+    <div className="app">
       <Navbar />
+      <img src={header} className="header" />
     </div>
   );
 }

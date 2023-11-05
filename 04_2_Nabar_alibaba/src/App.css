@@ -1,0 +1,28 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+  }
+  body {
+    direction: rtl;
+    font-family: 'vazir' !important;
+    /* background-color: burlywood; */
+  }
+  a{
+    text-decoration: none !important;
+  }
+  .app{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+  .header{
+    height: 320px;
+    max-width: 1400px;
+    align-self: center;
+  }
+  

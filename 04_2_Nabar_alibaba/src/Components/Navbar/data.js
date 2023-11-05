@@ -45,7 +45,7 @@ export const leftLinks = [
   {
     id: 3,
     url: "/login",
-    title: "ورود یا ثبت نام",
+    title: "ورود یا ثبت‌نام",
     icon: <AiOutlineUser />,
   },
 ];
