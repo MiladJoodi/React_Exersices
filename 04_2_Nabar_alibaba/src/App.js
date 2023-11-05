@@ -1,0 +1,20 @@
+import { useState } from "react";
+import "./App.css";
+import { Icon } from "react-icons-kit";
+import { eye } from "react-icons-kit/feather/eye";
+import { eyeOff } from "react-icons-kit/feather/eyeOff";
+import Navbar from './Components/Navbar/Navbar'
+
+
+function App() {
+
+  
+
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
+}
+
+export default App;
