@@ -10,4 +10,6 @@ body {
   direction: rtl;
   font-family: 'vazir' !important;
 }
-
+a{
+  text-decoration: none !important;
+}
