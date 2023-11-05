@@ -22,7 +22,7 @@
   }
   .header{
     height: 320px;
-    max-width: 1400px;
+    max-width: 100%;
     align-self: center;
   }
   

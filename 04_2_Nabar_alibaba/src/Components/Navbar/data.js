@@ -15,11 +15,13 @@ export const rightLinks = [
     url: "/residence",
     title: "اقامت",
     icon: <IoIosArrowDown />,
+    boder: 'border'
   },
   {
     id: 3,
     url: "/tour",
     title: "تور",
+    boder: "border"
   },
   {
     id: 4,
