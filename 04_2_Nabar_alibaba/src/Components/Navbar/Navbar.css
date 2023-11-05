@@ -56,8 +56,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    transition: height 0.3s ease;
+    transition: all 0.3s ease;
     height: 0;
+    /* overflow: hidden; */
 }
 .navbar-right-links li, .navbar-left li{
     padding: 0px 3px;
@@ -66,7 +67,7 @@
 .navbar-right-links a, .navbar-left a{
     display: flex;
     /* justify-content: center; */
-    /* align-items: center; */
+    align-items: center;
     padding: 5px 17px;
 
 }
@@ -105,7 +106,7 @@
     padding: 10px 5px
 }
 .active li{
-    width: 95%;
+    width: 98%;
     padding: 5px 15px;
     border: none;
     display: block !important;
