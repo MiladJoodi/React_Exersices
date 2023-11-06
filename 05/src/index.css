@@ -10,4 +10,48 @@ body {
   direction: rtl;
   font-family: 'vazir' !important;
 }
-
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+main .title{
+  font-size: 25px;
+  text-align: center;
+}
+.reviews{
+  width: 400px;
+  margin-top: 50px;box-shadow: 0 0 10px rgba(131, 131, 131, 0.3);
+  padding: 20px;
+  background: #fff;
+  position: relative;
+  height: 350px;
+  text-align: center;
+}
+.reviews img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.author{
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.job{
+  color: crimson;
+  font-weight: 600;
+}
+.info{
+  color: rgb(87, 87, 87);
+}
+button{
+  color: crimson;
+  border: none
+  ;
+  background: none;
+  outline: none;
+}
