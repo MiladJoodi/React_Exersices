@@ -28,6 +28,9 @@ main .title{
   position: relative;
   height: 350px;
   text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.151);
+  border-radius: 5px;
+
 }
 .reviews img{
   width: 80px;
@@ -50,8 +53,17 @@ main .title{
 }
 button{
   color: crimson;
-  border: none
-  ;
+  border: none;
   background: none;
   outline: none;
+}
+.review-button{
+  position: absolute;
+  bottom: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.151);
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+.review-button button:nth-child(1){
+  margin-left: 15px;
 }
