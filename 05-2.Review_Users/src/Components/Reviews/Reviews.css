@@ -1,0 +1,109 @@
+.review {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 15px;
+}
+
+.container {
+  width: 100%;
+  height: 300px;
+  box-shadow: 0 0 10px rgba(131, 131, 131, 0.3);
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+  background-image: linear-gradient(to top, #eeeeee 0%, white 100%);
+}
+
+.container .date {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  font-size: 12px;
+  background-color: #f0f0f080;
+  ;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+.verify {
+  position: absolute;
+  top: 19px;
+  left: 86px;
+  font-size: 15px;
+  color: green;
+}
+
+.container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 1px solid gray;
+  padding: 1px;
+  transition: all 0.1s ease;
+}
+
+.container img:hover {
+  filter: grayscale(100%);
+}
+
+.container .name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.container .job {
+  font-size: 14px;
+  font-weight: 600;
+  color: crimson;
+}
+
+.container .info {
+  text-align: justify;
+  color: rgb(95, 95, 95);
+  font-size: 14px;
+  height: 88px;
+}
+
+.review-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.review-button {
+  display: flex;
+  gap: 5px;
+}
+
+.review-button button {
+  border: none;
+  outline: none;
+  padding: 0 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: crimson;
+  box-shadow: 0 0 10px rgba(131, 131, 131, 0.3);
+
+}
+
+.review-button button:nth-child(1) {
+  margin-left: 10px;
+}
+
+.random-button {
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: crimson;
+  box-shadow: 0 0 10px rgba(131, 131, 131, 0.3);
+
+}

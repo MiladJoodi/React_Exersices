@@ -22,7 +22,8 @@ main .title{
 }
 .reviews{
   width: 400px;
-  margin-top: 50px;box-shadow: 0 0 10px rgba(131, 131, 131, 0.3);
+  margin-top: 50px;
+  box-shadow: 0 0 10px rgba(131, 131, 131, 0.3);
   padding: 20px;
   background: #fff;
   position: relative;
