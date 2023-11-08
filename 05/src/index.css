@@ -74,6 +74,9 @@ button{
 .review-button button:nth-child(1){
   margin-left: 15px;
 }
+.review-button button{
+  cursor: pointer;
+}
 .random-btn{
   background-color: rgba(220, 20, 60, 0.2);
   position: absolute;
