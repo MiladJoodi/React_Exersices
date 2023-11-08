@@ -28,9 +28,9 @@ main .title{
   position: relative;
   height: 350px;
   text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.151);
+  /* border: 1px solid rgba(0, 0, 0, 0.048); */
   border-radius: 5px;
-
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);  
 }
 .reviews img{
   width: 80px;
@@ -44,26 +44,40 @@ main .title{
   font-weight: bold;
   margin-top: 10px;
 }
-.job{
-  color: crimson;
+.job, .Typewriter__wrapper{
+  color: crimson !important;
+  margin-top: 10px;
   font-weight: 600;
 }
 .info{
   color: rgb(87, 87, 87);
+  margin: 10px;
+  text-align: justify;
+  /* text-indent: 40px; */
+
 }
 button{
   color: crimson;
   border: none;
   background: none;
   outline: none;
+  font-family: 'vazir';
+  /* cursor: pointer; */
 }
 .review-button{
   position: absolute;
   bottom: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.151);
+  /* border: 1px solid rgba(0, 0, 0, 0.151); */
   border-radius: 5px;
   padding: 5px 20px;
 }
 .review-button button:nth-child(1){
   margin-left: 15px;
+}
+.random-btn{
+  background-color: rgba(220, 20, 60, 0.2);
+  position: absolute;
+  bottom: 20px;
+  transform: translateX(50%);
+  padding: 5px 10px;
 }
