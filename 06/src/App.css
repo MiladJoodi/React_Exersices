@@ -1,0 +1,33 @@
+.app{
+    height: 1800px;
+    background-color: beige;
+}
+.header{
+    background-color: #4d4855;
+    background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
+    height: 45px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* border-radius: 10px; */
+}
+.links-container{
+    display: flex;
+    gap: 20px;
+    padding: 50px;
+
+}
+.links-container li a{
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: rgb(230, 230, 230);
+}
+.links-container li a:hover{
+    color: #fff;
+}
+.content p{
+    padding: 50px;
+}
+.content p{
+    margin-top: 20px;
+}
