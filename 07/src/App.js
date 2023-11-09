@@ -4,6 +4,7 @@ import "./App.css";
 function App() {
   return (
     <div className="app">
+      {/*start searchbar */}
       <div className="search-bar">
         <div class="input-group rounded">
           <span class="input-group-text border-0" id="search-addon">
@@ -19,6 +20,11 @@ function App() {
             aria-describedby="search-addon"
           />
         </div>
+      </div>
+      {/*end searchbar */}
+
+      <div className="gallery">
+        <img src="https://images.pexels.com/photos/18684565/pexels-photo-18684565/free-photo-of-old-tenements-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
       </div>
     </div>
   );
