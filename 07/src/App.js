@@ -1,31 +1,24 @@
 import { useState } from "react";
 import "./App.css";
-import { Icon } from "react-icons-kit";
-import { eye } from "react-icons-kit/feather/eye";
-import { eyeOff } from "react-icons-kit/feather/eyeOff";
 
 function App() {
-
-  const [type, setType] = useState('password')
-  const [icon, setIcon] = useState(eyeOff)
-
-  const handleClick = ()=>{
-    if(type === 'password'){
-      setType('text');
-      setIcon(eye)
-    }else{
-      setType('password');
-      setIcon(eyeOff)
-    }
-  }
-
   return (
-    <div className="wrapper">
-      <div className="input-fields">
-        <span onClick={handleClick}>
-          <Icon icon={icon} size={25} />
-        </span>
-        <input type={type} />
+    <div className="app">
+      <div className="search-bar">
+        <div class="input-group rounded">
+          <span class="input-group-text border-0" id="search-addon">
+            <button type="button" class="btn btn-danger">
+              جستجو کن
+            </button>
+          </span>
+          <input
+            type="search"
+            className="form-control rounded"
+            placeholder="جستجو"
+            aria-label="Search"
+            aria-describedby="search-addon"
+          />
+        </div>
       </div>
     </div>
   );
