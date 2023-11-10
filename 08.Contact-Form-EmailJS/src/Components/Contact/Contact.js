@@ -12,6 +12,7 @@ export default function Contact() {
     emailjs.sendForm('service_rl3y6io', 'template_df43755', e.target, 'owo-xHU8HphzzFfLK')
     .then(result=> {
       console.log(result);
+      //toast
       if(result.status === 200){
         toast.success('پیام شما دریافت شد',{
           position: 'bottom-right',
