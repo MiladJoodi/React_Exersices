@@ -2,6 +2,7 @@ import React from "react";
 import "./Contact.css";
 import emailjs from 'emailjs-com'
 import Background from "../Background/Background";
+import { ToastContainer, toast } from 'react-toastify';
 
 
 export default function Contact() {
@@ -11,7 +12,14 @@ export default function Contact() {
     emailjs.sendForm('service_rl3y6io', 'template_df43755', e.target, 'owo-xHU8HphzzFfLK')
     .then(result=> {
       console.log(result);
-      // console.log('kj');
+      if(result.status === 200){
+        toast.success('پیام شما دریافت شد',{
+          position: 'bottom-right',
+          closeOnClick: true
+        });
+      }
+    }, (error)=>{
+      console.log(error);
     })
   }
 
@@ -39,6 +47,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      <ToastContainer rtl />
     </div>
   );
 }

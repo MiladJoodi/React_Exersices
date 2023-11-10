@@ -48,3 +48,7 @@ textarea{
     border-color: transparent !important;
 }
 
+  .Toastify__toast-body{
+    font-family: 'vazir';
+    font-weight: 700;
+  }
