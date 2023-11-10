@@ -1,0 +1,50 @@
+.contact{
+    height: 100vh;
+    /* background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%); */
+    /* background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%); */
+    /* background-image: url('https://img.freepik.com/free-photo/moon-sky-night-background-asset-game-2d-futuristic-generative-ai_191095-2049.jpg'); */
+
+}
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.col-md-4{
+    /* width: 500px; */
+    height: 400px;
+    padding: 25px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(1px) !important;
+    box-shadow: 0 30px 50px 0 rgba(0,0,0,0.3);
+    border-radius: 10px;
+
+}
+.col-md-4 h4{
+    color: #fff;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-control{
+    border: none !important;
+    outline: none;
+    resize: none !important;
+    /* border-radius: 0 !important; */
+    border-bottom: 1px solid #ced4da !important;
+    
+}
+textarea{
+    height: 120px !important;
+}
+.form-control:focus{
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+
