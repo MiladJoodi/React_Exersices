@@ -1,9 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
-  const [dark, setDark] = useState(false);
-  console.log(dark);
+
+    const getMode = () => {
+    const initialMode = localStorage.getItem("mode");
+    if (initialMode == null) {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return true
+      } else {
+        return false;
+      }
+    } else {
+      return JSON.parse(localStorage.getItem("mode"));
+    }
+  }
+
+    const [dark, setDark] = useState(getMode());
+    console.log(dark);
+
+      useEffect(()=>{
+    localStorage.setItem("mode", JSON.stringify(dark))
+  }, [dark])
 
   return (
     <div className={dark ? "app dark-mode" : "app"}>
@@ -31,7 +49,7 @@ function App() {
 
       <div className="content">
         <div className="container">
-          <h3>{dark ? "لایت مود فعال است" : "دارک مود فعال است"}</h3>
+          <h3>{dark ? "دارک مود فعال است" : "لایت مود فعال است"}</h3>
         </div>
         <div className="container">
           <div className="card">
