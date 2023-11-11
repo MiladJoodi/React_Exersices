@@ -1,11 +1,10 @@
 .sidebar{
-
+    
 }
 .container{
     width: 270px;
     height: 100vh;
     margin: 0;
-    height: 100vh;
     font-weight: 100;
     background: radial-gradient(#a23982,#1f1013);
     -webkit-overflow-Y: hidden;
@@ -16,7 +15,8 @@
     -moz-animation: fadeIn 1 1s ease-out;
     -o-animation: fadeIn 1 1s ease-out;
     animation: fadeIn 1 1s ease-out;
-
+    transform: translateX(100%);
+    transition: all 0.4s;
 }
 .sidebar-header{
     display: flex;
@@ -35,4 +35,27 @@
         color: #fff;
         cursor: pointer;
     }
+}
+.links{
+    margin-top: 50px;
+    padding: 0 20px;
+}
+.links li{
+    /* padding: 5px 10px; */
+    border-radius: 10px;
+    cursor: pointer;
+}
+.links li:hover{
+    background-color: #ffffff2c;
+}
+.links li a{
+    color: #fff;
+    padding: 5px 10px;
+    display: block;
+}
+.links li a svg{
+    margin-left: 15px;
+}
+.show-sidebar{
+    transform: translateX(0%);
 }

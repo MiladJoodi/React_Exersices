@@ -9,5 +9,7 @@
 body {
   direction: rtl;
   font-family: 'vazir' !important;
+  background-image: url('https://images5.alphacoders.com/569/569961.jpg');
+  background-size: cover;
 }
 
