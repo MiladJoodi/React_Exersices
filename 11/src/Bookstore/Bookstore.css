@@ -26,7 +26,21 @@
 }
 
 .view-container{
-    width: 450px;
+    width: 550px;
     height: 300px;
     background-color: blanchedalmond;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 15px;
+}
+
+/* table */
+
+.delete-icon svg{
+    cursor: pointer;
+    color: crimson;
+}
+.alert{
+   margin-top: auto;
 }
