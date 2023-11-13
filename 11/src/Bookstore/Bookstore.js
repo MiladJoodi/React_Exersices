@@ -11,14 +11,13 @@ const getDataFromLs = ()=>{
   }
 }
 
-
 export default function Bookstore() {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [number, setNumber] = useState("");
   const [books, setBooks] = useState(getDataFromLs);
 
-  console.log(books);
+  // console.log(books);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -35,6 +34,13 @@ export default function Bookstore() {
       alert('6 item added')
     }
   };
+
+  const deleteHandler = (number)=>{
+    const filteredBooks = books.filter((element, index)=>{
+      return element.number !== number; 
+    })
+    setBooks(filteredBooks)
+  }
 
   useEffect(() => {
     localStorage.setItem("books", JSON.stringify(books));
@@ -99,9 +105,12 @@ export default function Bookstore() {
                   </tr>
                 </thead>
                 <tbody>
-                  <Book books={books} />
+                  <Book books={books} deleteHandler= {deleteHandler} />
                 </tbody>
               </table>
+              <button
+              className="btn btn-danger w-100"
+              onClick={()=> setBooks([])}>حذف همه</button>
             </div>
           ) : (
             <div class="alert alert-danger" role="alert">
