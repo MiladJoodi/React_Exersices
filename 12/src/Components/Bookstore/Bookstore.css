@@ -25,7 +25,7 @@
     padding: 25px;
     border: none;
     outline: none;
-    border: 1px dashed black !important;
+    /* border: 1px dashed black !important; */
     border-radius: 5px;
     text-align: center;
 }
@@ -39,7 +39,7 @@ input{
     background-color: transparent !important;
     border: none !important;
     outline: none !important;
-    border-bottom: 1px solid rgb(97, 97, 97) !important;
+    border-bottom: 1px solid rgb(218, 218, 218) !important;
     border-radius: 0 !important;
 }
 .form-control:focus{
@@ -55,7 +55,7 @@ input{
     padding: 25px;
     border: none;
     outline: none;
-    border: 1px dashed black !important;
+    /* border: 1px dashed black !important; */
     border-radius: 5px;
     text-align: center;
     display: flex;
