@@ -12,15 +12,18 @@ function App() {
 
   const submitHandler = (e)=>{
     e.preventDefault()
-    setTodos([...todos, {title : todo}])
+    setTodos([...todos, {id: Date.now(), title : todo, done: false}])
     console.log(todos);
   }
 
-  const delHandler = ()=>{
-    console.log('حذف')
+  const delHandler = (todoId)=>{
+    if(window.confirm('برای حذف مطمئن هستین؟')){
+      const updateTodos = todos.filter((item)=> item.id !== todoId)
+      setTodos(updateTodos)
+    }
 }
-const doneHandler = ()=>{
-    console.log('done')
+const doneHandler = (todoId)=>{
+    const index = todos.findIndex((item) => item.id === todoId) 
 }
 
   return (

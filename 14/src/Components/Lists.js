@@ -10,6 +10,7 @@ function Lists({del, done, todos}) {
                 todos && todos.map((todo, index)=>(
                     <ListItem 
                     key={index}
+                    id= {todo.id}
                     title={todo.title}
                     delHandler = {del} 
                     doneHandler={done} />
