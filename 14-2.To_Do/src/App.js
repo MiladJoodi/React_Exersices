@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Layout from "./Components/Layout";
 import Header from "./Components/Header";
@@ -6,13 +6,33 @@ import Form from "./Components/Form";
 import Lists from "./Components/Lists";
 
 function App() {
+  const [error, setError] = useState(null)
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([]);
+
+  useEffect(()=>{
+    const getTodos = JSON.parse(localStorage.getItem('todos'))
+
+    if(getTodos){
+      setTodos(getTodos)
+    }
+  },[])
+
+  useEffect(()=>{
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
 
   // Submit Handler
   const submitHandler = (e) => {
     e.preventDefault();
+
+    if(todo.length < 5){
+      setError('کار خود را وارد کنید (حداقل 5 کاراکتر)')
+      return false
+    }
+
     setTodos([...todos, { id: Date.now(), title: todo, done: false }]);
+    setError(null)
   };
 
   const delHandler = (todoId) => {
@@ -26,7 +46,7 @@ function App() {
     const duplicateTodos = [...todos]
 
     duplicateTodos[index] = {
-      id: todo[index].id,
+      id: todos[index].id,
       title: todos[index].title,
       done: !todos[index].done
     }
@@ -42,6 +62,7 @@ function App() {
         todo={todo}
         change={(e) => setTodo(e.target.value)}
         submit={submitHandler}
+        error={error}
       />
       <Lists 
       todos={todos}

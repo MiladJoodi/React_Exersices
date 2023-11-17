@@ -1,0 +1,96 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+body {
+  direction: rtl;
+  font-family: 'vazir' !important;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+del{
+  text-decoration: line-through;
+}
+.form {
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  height: 110px;
+}
+.input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  /* flex: 1; */
+  width: 75% !important;
+}
+.input:focus , .add:focus{
+  outline: none;
+}
+.add {
+  border: none;
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  /* margin-left: 10px; */
+  cursor: pointer;
+}
+.tasks {
+  background-color: #eee;
+  margin-top: 20px;
+  border-radius: 6px;
+  padding: 20px;
+}
+.tasks .task {
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.tasks .task:not(:last-child) {
+  margin-bottom: 15px;
+}
+.tasks .task:hover {
+  background-color: #f7f7f7;
+}
+.tasks .task.done {
+  opacity: 0.5;
+  position: relative;
+}
+.task.done::after {
+  position: absolute;
+  content: "";
+}
+.tasks .task span { 
+  font-weight: bold;
+  font-size: 10px;
+  background-color: red;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.delete-all {
+  width: calc(100% - 25px);
+  margin: auto;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  background-color: #f44336;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
