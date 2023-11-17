@@ -1,6 +1,6 @@
 import React from "react";
 
-function Form({todo, change, submit}) {
+function Form({todo, change, submit, error}) {
   return (
     <form onSubmit={submit} className="py-3">
       <div className="form-group row">
@@ -13,6 +13,7 @@ function Form({todo, change, submit}) {
           value={todo}
           onChange={change}
           />
+          {error && <small className="text-danger pt-3">{error}</small>}
         </div>
       </div>
     </form>

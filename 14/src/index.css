@@ -11,3 +11,6 @@ body {
   font-family: 'vazir' !important;
 }
 
+del{
+  text-decoration: line-through;
+}
