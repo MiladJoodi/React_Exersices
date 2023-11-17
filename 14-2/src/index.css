@@ -1,0 +1,17 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+body {
+  direction: rtl;
+  font-family: 'vazir' !important;
+  background: linear-gradient(120deg, rgb(226, 207, 129), rgb(232, 139, 97));
+  min-height: 100vh;
+  color: #fff;
+}
+
+
