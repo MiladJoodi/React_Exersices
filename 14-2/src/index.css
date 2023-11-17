@@ -13,5 +13,7 @@ body {
   min-height: 100vh;
   color: #fff;
 }
-
+del{
+  text-decoration: line-through;
+}
 
