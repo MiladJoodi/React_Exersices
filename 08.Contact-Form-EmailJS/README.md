@@ -1,11 +1,11 @@
 ## Project 08
-Contact Email
-   ○ axios
-   ○ bootstrap
-   ○ emailjs-com
-   ○ react-dom
-   ○ react-icons
-   ○ react-toastify
+Contact Email\
+   ○ axios\
+   ○ bootstrap\
+   ○ emailjs-com\
+   ○ react-dom\
+   ○ react-icons\
+   ○ react-toastify\
 
    
 ### Cover:
