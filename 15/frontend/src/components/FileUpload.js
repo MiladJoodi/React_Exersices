@@ -1,22 +1,54 @@
-import React from 'react'
+import React, { useState } from "react";
+import Progress from "./Progress";
+import ShowData from "./ShowData";
 
 function FileUpload() {
+
+  const [file, setFile] = useState("")
+  const [fileName, setFileName] = useState("انتخاب عکس")
+  
+
+  const onChange = e=> {
+    setFile(e.target.files[0])
+    setFileName(e.target.files[0].name)
+  }
+
+  const handleSubmit = (e)=>{
+    e.preventDefault()
+
+    const formData = new FormData()
+    formData.append('image', file)
+
+    
+
+  }
+
   return (
     <>
-        <form>
-            <div className='form-group mt-5'>
-                <label htmlFor="customFile" className='custom-file-lable mb-2'>انتخاب عکس</label>
-                <input type="file" className='form-control' id='customFile' />
-                <div className="progress mt-3">
-                <div className="progress-bar progress-bar-striped bg-success" role="progressbar" style={{width: "25%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">30%</div>
-                </div>
-                <input type="submit" className='btn btn-primary mt-5' value="ارسال عکس" />
-            </div>
-        </form>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group mt-5">
+          <label htmlFor="customFile" className="custom-file-lable mb-2">
+            {fileName}
+          </label>
+          <input type="file"
+          className="form-control"
+          name="image"
+          id="customFile" 
+          onChange={onChange}
+          />
 
-        <div className='show-data'></div>
+          <Progress />
+        </div>
+        <input
+          type="submit"
+          className="btn btn-primary mt-5"
+          value="ارسال عکس"
+        />
+      </form>
+
+      <ShowData />
     </>
-  )
+  );
 }
 
-export default FileUpload
+export default FileUpload;
