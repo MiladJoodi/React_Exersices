@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from 'axios';
 import Progress from "./Progress";
 import ShowData from "./ShowData";
 
@@ -18,8 +19,15 @@ function FileUpload() {
 
     const formData = new FormData()
     formData.append('image', file)
-
-    
+    axios.post('http://localhost:5080/products', formData, {
+      headers:{
+        "Content-Type" : "multipart/form-data"
+      }
+    })
+    .then(res=> {
+      console.log(res);
+    })
+    .catch()
 
   }
 
