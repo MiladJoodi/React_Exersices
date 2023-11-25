@@ -19,7 +19,7 @@ function FileUpload() {
 
     const formData = new FormData()
     formData.append('image', file)
-    axios.post('http://localhost:5080/products', formData, {
+    axios.post('http://localhost:8000/api/upload', formData, {
       headers:{
         "Content-Type" : "multipart/form-data"
       }
