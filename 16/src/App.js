@@ -21,7 +21,8 @@ function App() {
             const { id, image, title, qoute } = person;
 
             let position = "nextSlide";
-
+            
+ 
             return (
               <article className={position} key={id}>
                 <img src={image} alt={title} className="person-img" />
