@@ -16,7 +16,7 @@ function ShowData() {
           <div className="col-lg-3 mt-4">
             <img src="image/4.jpg" className="w-100" style={{height: "300px", objectFit: "cover"}} alt="" />
           </div>
-        </div><span>d</span>
+        </div>
       </div>
       
   )
