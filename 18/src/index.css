@@ -8,6 +8,7 @@ html{
   text-decoration: none;
   list-style: none;
   outline: none;
+  box-sizing: border-box;
 }
 body {
   direction: rtl;
@@ -46,7 +47,6 @@ footer{
 
 .content{
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 50px 0;
 }
@@ -69,6 +69,11 @@ main{
   align-items: center;
   justify-content: space-between;
   font-size: 1.6rem;
+}
+.filter .sort-title{
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
 .filter select{
@@ -93,6 +98,7 @@ main{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .products li{
@@ -108,4 +114,113 @@ main{
   width: 100%;
   height: 300px;
   object-fit: contain;
+}
+
+.products li p{
+  color: #333;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  text-align: right;
+  padding-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.products li .product-price{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.products li .product-price button{
+  background: rgb(32, 43, 73);
+  padding: 5px 10px;
+  font-family: 'vazir';
+  border: none;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+.products li .product-price .price{
+  color: rgb(12, 199, 137);
+  font-size: 1.8rem;
+}
+
+
+.empty-price{
+  color: crimson;
+  font-size: 1.8rem;
+}
+
+.cart-item{
+  margin-top: 30px;
+}
+
+.product-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  padding: 15px 0;
+}
+
+.product-item img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.product-detail{
+  display: flex;
+}
+
+.product-detail h2{
+  margin-right: 10px;
+  font-size: 1.4rem;
+}
+
+.product-price{
+  font-size: 1.6;
+  font-weight: 600px;
+}
+
+.product-price .price {
+  display: flex;
+  align-items: center;
+}
+
+.qty{
+  background: green;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.remove-item button{
+  background: crimson;
+  padding: 2px 20px;
+  color: #fff;
+  border: none;
+  font-family: 'vazir';
+  margin-top: 15px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.total-price{
+  background:  rgb(236, 236, 236);
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
 }
