@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import Filter from "./components/Filter";
+import Products from "./components/Products";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -16,15 +18,19 @@ function App() {
         <div className="content">
           <div className="main">
             <Filter />
-            <div className="products"></div>
+            <Products />
           </div>
-          <div className="sidebar"></div>
+          <div className="sidebar">
+            <Cart />
+          </div>
         </div>
       </main>
       {/* end header */}
 
       {/* start footer */}
-      <footer></footer>
+      <footer>
+        طراحی شده توسط من
+      </footer>
       {/* end footer */}
     </div>
   );
