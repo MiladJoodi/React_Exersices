@@ -9,5 +9,6 @@
 body {
   direction: rtl;
   font-family: 'vazir' !important;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 

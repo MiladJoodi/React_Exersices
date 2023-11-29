@@ -1,20 +1,22 @@
 import React from "react";
 
-export default function Progressbar() {
+export default function Progressbar({percent, functionProgressColor, changePasswordColor, createPassLabel}) {
+
+
   return (
     <div className="progressbar-container mt-2">
       <div className="progress">
         <div
-          className="progress-bar bg-success"
+          className="progress-bar"
           role="progressbar"
-          style={{width: "25%"}}
+          style={changePasswordColor()}
           aria-valuenow="25"
           aria-valuemin="0"
           aria-valuemax="100"
         ></div>
       </div>
-      <small id="passwordHelpInline" className="text-muted">
-        قوی
+      <small style={{color: functionProgressColor()}} id="passwordHelpInline" className="text-muted">
+        {createPassLabel()}
       </small>
     </div>
   );
