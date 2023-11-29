@@ -19,9 +19,10 @@ function App() {
   }, [index, people])
 
   useEffect(()=>{
-  setInterval(()=>{
+  let slider = setInterval(()=>{
     setIndex(index+1)
   },3000)
+  return()=> clearInterval(slider)
   }, [index])
 
 
