@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import data from './data'
 import "./App.css";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
@@ -8,6 +8,21 @@ function App() {
 
   const [people, setPeople] = useState(data);
   const [index, setIndex] = useState(0);
+
+  useEffect(()=>{
+    let lastIndex = people.length - 1;
+    if(index < 0){
+      setIndex(lastIndex)
+    }if(index > lastIndex){
+      setIndex(0)
+    }
+  }, [index, people])
+
+  useEffect(()=>{
+  setInterval(()=>{
+    setIndex(index+1)
+  },3000)
+  }, [index])
 
 
   return (
@@ -45,7 +60,7 @@ function App() {
 
       </div>
     </div>
-  );
+  ); 
 }
 
 export default App;
