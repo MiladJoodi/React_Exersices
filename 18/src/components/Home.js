@@ -3,33 +3,42 @@ import { useState } from "react";
 import Filter from "./Filter";
 import Products from "./Products";
 import Cart from "./Cart";
-import data from '../data.json'
+import data from "../data.json";
 
 export default function Home() {
+  const [item, setItem] = useState(data.products);
+  const [sort, setSort] = useState("asc");
+  const [brand, setBrand] = useState("");
 
-    const [item, setItem] = useState(data.products)
-    const [sort, setSort] = useState("asc")
-    const [brand, setBrand] = useState("")
+  const [cartItems, setCartItems] = useState("");
 
-    const sortProducts = (event)=>{
-        setSort(event.target.value)
-        if(sort === 'asc'){
-            setItem(data.products.sort((a,b)=> (a.id < b.id ? 1 : -1)))
-        }if(sort === 'desc'){
-            setItem(data.products.sort((a,b)=> (a.id > b.id ? 1 : -1)))
-        }
+  const sortProducts = (event) => {
+    setSort(event.target.value);
+    if (sort === "asc") {
+      setItem(data.products.sort((a, b) => (a.id < b.id ? 1 : -1)));
     }
-
-    const filterProducts = (event)=>{
-        if(event.target.value === ""){
-            setBrand(event.target.value)
-            setItem(data.products)
-        }else{
-            setBrand(event.target.value)
-            setItem(data.products.filter((product)=> product.availableBrand.indexOf(event.target.value) >= 0))
-        }
+    if (sort === "desc") {
+      setItem(data.products.sort((a, b) => (a.id > b.id ? 1 : -1)));
     }
+  };
 
+  const filterProducts = (event) => {
+    if (event.target.value === "") {
+      setBrand(event.target.value);
+      setItem(data.products);
+    } else {
+      setBrand(event.target.value);
+      setItem(
+        data.products.filter(
+          (product) => product.availableBrand.indexOf(event.target.value) >= 0
+        )
+      );
+    }
+  };
+
+  const addProducts = (product) => {
+    console.log(product)
+  };
 
   return (
     <div className="container">
@@ -44,12 +53,16 @@ export default function Home() {
         <div className="content">
           <div className="main">
             <Filter
-            count={item.length}
-            sortProducts={sortProducts}
-            brand={brand}
-            filterProducts={filterProducts}
+              count={item.length}
+              sortProducts={sortProducts}
+              brand={brand}
+              filterProducts={filterProducts}
             />
-            <Products item={item} />
+            <Products
+              item={item} 
+              addProducts = {addProducts}
+            
+            />
           </div>
           <div className="sidebar">
             <Cart />
