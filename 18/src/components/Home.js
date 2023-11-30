@@ -10,7 +10,7 @@ export default function Home() {
   const [sort, setSort] = useState("asc");
   const [brand, setBrand] = useState("");
 
-  const [cartItems, setCartItems] = useState("");
+  const [cartItems, setCartItems] = useState([]);
 
   const sortProducts = (event) => {
     setSort(event.target.value);
@@ -37,7 +37,8 @@ export default function Home() {
   };
 
   const addProducts = (product) => {
-    console.log(product)
+    setCartItems([...cartItems, {...product}])
+    console.log(cartItems)
   };
 
   return (
