@@ -8,7 +8,16 @@ import data from '../data.json'
 export default function Home() {
 
     const [item, setItem] = useState(data.products)
-    console.log(item)
+    const [sort, setSort] = useState("asc")
+
+    const sortProducts = (event)=>{
+        setSort(event.target.value)
+        if(sort === 'asc'){
+            setItem(data.products.sort((a,b)=> (a.id < b.id ? 1 : -1)))
+        }if(sort === 'desc'){
+            setItem(data.products.sort((a,b)=> (a.id > b.id ? 1 : -1)))
+        }
+    }
 
 
   return (
@@ -23,7 +32,7 @@ export default function Home() {
       <main>
         <div className="content">
           <div className="main">
-            <Filter />
+            <Filter count={item.length} sortProducts={sortProducts} />
             <Products item={item} />
           </div>
           <div className="sidebar">
