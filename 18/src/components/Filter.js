@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Filter(props) {
 
-  console.log(props)
+  // console.log(props)
 
   return (
     <div className="filter">
@@ -24,14 +24,14 @@ export default function Filter(props) {
       </div>
       <div className="brand">
         برندها
-        <select>
+        <select value={props.brand} onChange={props.filterProducts}>
             <option value="">همه</option>
-            <option value="">سامسونگ</option>
-            <option value="">آیفون</option>
-            <option value="">موتورولا</option>
-            <option value="">بلک بری</option>
-            <option value="">ال جی</option>
-            <option value="">سونی</option>
+            <option value="samsung">سامسونگ</option>
+            <option value="iphone">آیفون</option>
+            <option value="motorola">موتورولا</option>
+            <option value="blackberry">بلک بری</option>
+            <option value="lg">ال جی</option>
+            <option value="sony">سونی</option>
         </select>
       </div>
     </div>
