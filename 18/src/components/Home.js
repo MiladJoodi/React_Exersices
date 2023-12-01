@@ -45,9 +45,20 @@ export default function Home() {
     }else{
       setCartItems([...cartItems, {...product}])
     }
-    console.log(cartItems);
-
+    // console.log(cartItems);
   };
+
+  const removeProducts = (product)=>{
+    const exist = cartItems.find((element)=> element.id === product.id)
+    if(exist.qty === 1){
+      setCartItems(cartItems.filter((element)=> element.id !== product.id))
+    }else{
+      setCartItems(
+        cartItems.map((element)=> element.id === product.id ? {...exist, qty: exist.qty - 1 } : element)
+      )
+    }
+
+  }
 
   return (
     <div className="container">
@@ -76,6 +87,7 @@ export default function Home() {
           <div className="sidebar">
             <Cart
               cartItems={cartItems}
+              removeProducts={removeProducts}
              />
           </div>
         </div>
