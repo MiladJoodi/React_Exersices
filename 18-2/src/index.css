@@ -46,7 +46,6 @@ footer {
 }
 .content{
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 50px 0;
 }
@@ -129,9 +128,42 @@ main{
   color: rgb(12, 199, 137);
   font-size: 1.8rem;
 }
-
-
-
 /* End Products Styles */
+
+/* Start Cart Styles */
+.empty-price{
+  color: crimson;
+  font-size: 1.8rem;
+}
+.cart-item{
+  margin-top: 30px;
+}
+.product-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  padding: 15px 0;
+}
+.product-item img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+
+/* End Cart Styles */
+
+
+
+
+
+
+
+
+
+
+/* Start ** Styles */
+/* End ** Styles */
 
 
