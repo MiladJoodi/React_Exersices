@@ -37,16 +37,16 @@ export default function Home() {
   };
 
   const addProducts = (product) => {
-
     const exist = cartItems.find((element)=> element.id === product.id)
     if(exist){
       setCartItems(
-        cartItems.map((element)=> element.id === product.id)
+        cartItems.map((element)=> element.id === product.id ? {...exist, qty: exist.qty + 1 } : element)
       )
+    }else{
+      setCartItems([...cartItems, {...product}])
     }
+    console.log(cartItems);
 
-    setCartItems([...cartItems, {...product}])
-    console.log(cartItems)
   };
 
   return (
