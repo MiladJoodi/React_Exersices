@@ -74,7 +74,9 @@ export default function Home() {
             />
           </div>
           <div className="sidebar">
-            <Cart />
+            <Cart
+              cartItems={cartItems}
+             />
           </div>
         </div>
       </main>

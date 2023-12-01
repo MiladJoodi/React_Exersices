@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Cart() {
+export default function Cart(props) {
   return (
     <>
         <div className='empty-price'>سبد خرید خالی است.</div>
