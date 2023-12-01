@@ -15,15 +15,13 @@ function App() {
       </header>
       <main>
         <div className="content">
-        <div className="main">
-
-          <Filter />
-          <Products />
-
-        </div>
-        <div className="sidebar">
-          <Cart />
-        </div>
+          <div className="main">
+            <Filter />
+            <Products />
+          </div>
+          <div className="sidebar">
+            <Cart />
+          </div>
         </div>
       </main>
       <footer>
