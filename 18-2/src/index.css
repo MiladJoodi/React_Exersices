@@ -16,11 +16,13 @@ body {
   font-family: 'vazir' !important;
   height: 10vh;
 }
-.container{
+
+.container {
   display: flex;
   flex-direction: column;
   /* بالایی باعث میشه که وقتی عرض کم میشه محتوا از کادر خارج نشه، مثلا وقتی که اینسپکت المنت میگیری */
 }
+
 header {
   height: 5rem;
   background: rgb(32, 43, 73);
@@ -44,53 +46,63 @@ footer {
   height: 10rem;
   color: aliceblue;
 }
-.content{
+
+.content {
   display: flex;
   justify-content: space-between;
   padding: 50px 0;
 }
-.main{
+
+.main {
   width: calc(70% - 20px);
 }
-.sidebar{
+
+.sidebar {
   width: calc(30% - 20px);
 }
-main{
+
+main {
   padding: 0 20px;
 }
 
 /* Start Filter Styles */
-.filter{
+.filter {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 1.6rem;
 }
-.filter select{
+
+.filter select {
   padding: 5px;
   border: 1px solid rgb(187, 187, 187);
   width: 200px;
   font-family: 'vazir';
   margin-right: 10px;
 }
-.filter .form-checkbox{
+
+.filter .form-checkbox {
   display: flex;
 }
-.filter .form-checkbox .form-group{
+
+.filter .form-checkbox .form-group {
   margin: 0 5px;
 }
-.filter .form-checkbox input{
+
+.filter .form-checkbox input {
   margin-left: 5px;
 }
+
 /* End Filter Styles */
 
 /* Start Products Styles */
-.products{
+.products {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.products li{
+
+.products li {
   width: calc(33.33% - 10px);
   padding: 20px;
   box-shadow: 0 0 10px rgba(139, 139, 139, 0.3);
@@ -98,25 +110,29 @@ main{
   background: #fff;
   text-align: center;
 }
-.products li img{
+
+.products li img {
   width: 100%;
   height: 300px;
   object-fit: contain;
 }
-.products li p{
+
+.products li p {
   color: #333;
-  border-bottom: 1px solid rgb(221,221,221);
+  border-bottom: 1px solid rgb(221, 221, 221);
   text-align: right;
   padding-bottom: 20px;
   font-size: 1.8rem;
 }
-.products li .product-price{
+
+.products li .product-price {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
 }
-.products li .product-price button{
+
+.products li .product-price button {
   background: rgb(32, 43, 73);
   padding: 5px 10px;
   font-family: 'vazir';
@@ -124,31 +140,77 @@ main{
   cursor: pointer;
   color: aliceblue;
 }
-.products li .product-price .price{
+
+.products li .product-price .price {
   color: rgb(12, 199, 137);
   font-size: 1.8rem;
 }
+
 /* End Products Styles */
 
 /* Start Cart Styles */
-.empty-price{
+.empty-price {
   color: crimson;
   font-size: 1.8rem;
 }
-.cart-item{
+
+.cart-item {
   margin-top: 30px;
 }
-.product-item{
+
+.product-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgb(207, 207, 207);
   padding: 15px 0;
 }
-.product-item img{
+
+.product-item img {
   width: 100px;
   height: 100px;
   object-fit: cover;
+}
+
+.product-detail {
+  display: flex;
+}
+
+.product-detail h2 {
+  margin-right: 10px;
+  font-size: 1.4rem;
+}
+
+.product-price {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.product-price .price {
+  display: flex;
+  align-items: center;
+}
+
+.product-price .price .qty {
+  background-color: green;
+  border-radius: 50%;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+.remove-item button{
+  background: crimson;
+  padding: 2px 20px;
+  color: #fff;
+  border: none;
+  font-family: 'vazir';
+  margin-top: 15px;
+  width: 100%;
 }
 
 
@@ -165,5 +227,3 @@ main{
 
 /* Start ** Styles */
 /* End ** Styles */
-
-
