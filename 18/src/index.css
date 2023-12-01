@@ -14,6 +14,7 @@ body {
   direction: rtl;
   font-family: 'vazir' !important;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .container{
@@ -149,7 +150,18 @@ main{
 .empty-price{
   color: crimson;
   font-size: 1.8rem;
+  text-align: center;
+  background-color: rgb(255, 204, 204);
+  padding:  10px 0;
 }
+.show-price{
+  color: rgb(20, 200, 103);
+  font-size: 1.8rem;
+  text-align: center;
+  background-color: rgb(198, 255, 205);
+  padding:  10px 0;
+}
+
 
 .cart-item{
   margin-top: 30px;
