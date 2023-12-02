@@ -8,7 +8,7 @@ export default function Filter(props) {
             تعداد محصولات: {props.count} محصول
         </div>
         <div className="sort">
-            <div className='sort-title'>مرتب سازی بر اساس</div>
+            {/* <div className='sort-title'>مرتب سازی بر اساس</div> */}
             <div className='form-checkbox'>
                 <div className='form-group'>
                     <input type="radio" value="asc" onChange={props.sortProducts} name='radiovalues' />

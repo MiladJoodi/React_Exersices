@@ -30,11 +30,31 @@ header {
   align-items: center;
   justify-content: space-between;
   font-size: 1.7rem;
+  padding: 0 5rem;
 }
 
 header a {
   color: aliceblue;
-  padding-right: 5rem;
+  cursor: pointer;
+  transition: 0.1s;
+}
+header a:hover{
+  color: rgb(209, 220, 230);
+}
+header .menu{
+  display: flex;
+  gap: 5rem;
+}
+.header-left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .login-icon{
+  color: #fff;
+  font-size: 1.8rem;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 footer {
@@ -72,7 +92,8 @@ main {
   justify-content: space-between;
   font-size: 1.6rem;
 }
-.filter .sort-title{
+
+.filter .sort-title {
   text-align: center;
   font-size: 1.4rem;
   margin-bottom: 10px;
@@ -88,6 +109,7 @@ main {
 
 .filter .form-checkbox {
   display: flex;
+  gap: 15px;
 }
 
 .filter .form-checkbox .form-group {
@@ -115,11 +137,12 @@ main {
   margin-top: 30px;
   background: #fff;
   text-align: center;
+  border-radius: 5px;
 }
 
 .products li img {
   width: 100%;
-  height: 300px;
+  height: 200px;
   object-fit: contain;
 }
 
@@ -145,11 +168,17 @@ main {
   border: none;
   cursor: pointer;
   color: aliceblue;
+  border-radius: 5px;
+  transition: 0.1s;
+}
+
+.products li .product-price button:hover {
+  background: rgba(32, 43, 73, 0.9);
 }
 
 .products li .product-price .price {
   color: rgb(12, 199, 137);
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 
 /* End Products Styles */
@@ -158,6 +187,19 @@ main {
 .empty-price {
   color: crimson;
   font-size: 1.8rem;
+  text-align: center;
+  background: rgb(255, 213, 213);
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+.show-price {
+  color: green;
+  font-size: 1.8rem;
+  text-align: center;
+  background: rgb(197, 231, 201);
+  padding: 10px 0;
+  border-radius: 5px;
 }
 
 .cart-item {
@@ -209,7 +251,8 @@ main {
   font-size: 1.2rem;
   margin-right: 10px;
 }
-.remove-item button{
+
+.remove-item button {
   background: crimson;
   padding: 2px 20px;
   color: #fff;
@@ -219,7 +262,8 @@ main {
   width: 100%;
   cursor: pointer;
 }
-.total-price{
+
+.total-price {
   background: rgb(236, 236, 236);
   padding: 50px;
   display: flex;
@@ -231,14 +275,42 @@ main {
 
 /* End Cart Styles */
 
+.payment-btn {
+  width: 100%;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 5px;
+  background-color: green;
+  color: #fff;
+  font-family: 'vazir';
+  font-size: 1.6rem;
+  transition: 0.1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
+.payment-btn:hover {
+  background-color: rgb(14, 167, 14);
+}
 
+.payment-btn-disable {
+  width: 100%;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 5px;
+  color: #fff;
+  font-family: 'vazir';
+  font-size: 1.6rem;
+  transition: 0.1s;
+  border-radius: 5px;
+}
 
+.Toastify__toast-body {
+  font-family: 'vazir' !important;
+  font-size: 1.6rem;
+}
 
-
-
-
-
-
-/* Start ** Styles */
-/* End ** Styles */
+.filter select{
+  border-radius: 10px;
+  border: 1px solid rgb(240, 240, 240);
+}

@@ -3,6 +3,10 @@ import Filter from "./Filter";
 import Products from "./Products";
 import Cart from "./Cart";
 import data from '../data.json'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { FaRegUser } from "react-icons/fa";
+
 
 export default function Home() {
 
@@ -37,7 +41,6 @@ export default function Home() {
   }
 
   const addProducts = (product) => {
-
     const exist = cartItems.find((element) => element.id === product.id)
     if (exist) {
       setCartItems(
@@ -53,6 +56,13 @@ export default function Home() {
     const exist = cartItems.find((element) => element.id === product.id)
     if(exist.qty === 1){
       setCartItems(cartItems.filter((element)=> element.id !== product.id))
+      toast.success("محصول حذف شد", {
+        position: toast.POSITION.TOP_RIGHT,
+        hideProgressBar: true,
+
+
+      });
+    
     }else{
       setCartItems(cartItems.map((element) => element.id === product.id ? { ...exist, qty: exist.qty - 1 } : element))
     }
@@ -62,6 +72,15 @@ export default function Home() {
     <div className="container">
       <header>
         <a href="">فروشگاه من</a>
+        <div className="header-left">
+        <ul className="menu">
+            <li><a href="#">گوشی</a></li>
+            <li><a href="#">لوازم جانبی</a></li>
+            <li><a href="#">قطعات</a></li>
+            <li><a href="#">پشتیبانی</a></li>
+          </ul>
+          <FaRegUser className="login-icon" />
+        </div>
       </header>
       <main>
         <div className="content">
@@ -88,6 +107,7 @@ export default function Home() {
       <footer>
         طراحی و توسعه توسط من
       </footer>
+      <ToastContainer autoClose={1000} />
     </div>
   )
 }

@@ -1,4 +1,6 @@
 import React from 'react'
+import formatCurrency from '../util'
+import Fade from 'react-reveal/Fade';
 
 function Products(props) {
 
@@ -6,6 +8,7 @@ function Products(props) {
 
     return (
         <div>
+            <Fade bottom cascade>
             <ul className='products'>
                 {
                     props.item.map((item) =>
@@ -15,15 +18,14 @@ function Products(props) {
                                 <p>{item.title}</p>
                                 <div className='product-price'>
                                     <button onClick={() => props.addProducts(item)}>افزودن به سبد خرید</button>
-                                    <div className='price'>{item.price}</div>
+                                    <div className='price'>{formatCurrency(item.price)}</div>
                                 </div>
                             </div>
                         </li>
                     )
                 }
-
-
             </ul>
+            </Fade>
         </div>
     )
 }
