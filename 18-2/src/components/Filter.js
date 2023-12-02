@@ -1,34 +1,35 @@
 import React from 'react'
 
-export default function Filter() {
+export default function Filter(props) {
+    // console.log(props)
   return (
     <div className='filter'>
         <div className="result">
-            تعداد محصولات: 6 محصول
+            تعداد محصولات: {props.count} محصول
         </div>
         <div className="sort">
             <div className='sort-title'>مرتب سازی بر اساس</div>
             <div className='form-checkbox'>
                 <div className='form-group'>
-                    <input type="radio" />
+                    <input type="radio" value="asc" onChange={props.sortProducts} name='radiovalues' />
                     <label>جدیدترین محصولات</label>
                 </div>
                 <div className='form-group'>
-                    <input type="radio" />
+                    <input type="radio" value="desc" onChange={props.sortProducts} name='radiovalues' />
                     <label>قدیمی ترین محصولات</label>
                 </div>
             </div>
         </div>
         <div className="brand">
             برندها
-            <select>
+            <select value={props.brand} onChange={props.filterProducts}>
                 <option value="">همه</option>
-                <option value="">سامسونگ</option>
-                <option value="">آیفون</option>
-                <option value="">موتورولا</option>
-                <option value="">بلک بری</option>
-                <option value="">ال جی</option>
-                <option value="">سونی</option>
+                <option value="samsung">سامسونگ</option>
+                <option value="iphone">آیفون</option>
+                <option value="motorola">موتورولا</option>
+                <option value="blackberry">بلک بری</option>
+                <option value="lg">ال جی</option>
+                <option value="sony">سونی</option>
             </select>
         </div>
     </div>

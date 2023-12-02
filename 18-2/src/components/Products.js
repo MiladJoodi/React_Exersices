@@ -1,56 +1,28 @@
 import React from 'react'
 
-function Products() {
+function Products(props) {
+
+    // console.log(props.item)
+
     return (
         <div>
             <ul className='products'>
-                <li>
+                {
+                    props.item.map((product)=>
+                    <li>
                     <div className='product'>
-                        <img src="images/mobile1.jpg" />
-                        <p>محصول اول</p>
+                        <img src={product.image} />
+                        <p>{product.title}</p>
                         <div className='product-price'>
                             <button>افزودن به سبد خرید</button>
-                            <div className='price'>1600000</div>
+                            <div className='price'>{product.price}</div>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div className='product'>
-                        <img src="images/mobile1.jpg" />
-                        <p>محصول اول</p>
-                        <div className='product-price'>
-                            <button>افزودن به سبد خرید</button>
-                            <div className='price'>1600000</div>
-                        </div>
-                    </div>
-                </li><li>
-                    <div className='product'>
-                        <img src="images/mobile1.jpg" />
-                        <p>محصول اول</p>
-                        <div className='product-price'>
-                            <button>افزودن به سبد خرید</button>
-                            <div className='price'>1600000</div>
-                        </div>
-                    </div>
-                </li><li>
-                    <div className='product'>
-                        <img src="images/mobile1.jpg" />
-                        <p>محصول اول</p>
-                        <div className='product-price'>
-                            <button>افزودن به سبد خرید</button>
-                            <div className='price'>1600000</div>
-                        </div>
-                    </div>
-                </li><li>
-                    <div className='product'>
-                        <img src="images/mobile1.jpg" />
-                        <p>محصول اول</p>
-                        <div className='product-price'>
-                            <button>افزودن به سبد خرید</button>
-                            <div className='price'>1600000</div>
-                        </div>
-                    </div>
-                </li>
+                    )
+                }
+                
+                
             </ul>
         </div>
     )

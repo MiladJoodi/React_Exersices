@@ -1,33 +1,19 @@
-import { useState } from "react";
 import "./App.css";
-import Filter from "./components/Filter";
-import Products from "./components/Products";
-import Cart from "./components/Cart";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './components/Home';
 
 function App() {
 
 
 
   return (
-    <div className="container">
-      <header>
-        <a href="">فروشگاه من</a>
-      </header>
-      <main>
-        <div className="content">
-          <div className="main">
-            <Filter />
-            <Products />
-          </div>
-          <div className="sidebar">
-            <Cart />
-          </div>
-        </div>
-      </main>
-      <footer>
-        طراحی و توسعه توسط من
-      </footer>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home />}>
+
+      </Route>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
