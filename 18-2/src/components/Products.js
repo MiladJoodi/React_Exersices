@@ -8,21 +8,21 @@ function Products(props) {
         <div>
             <ul className='products'>
                 {
-                    props.item.map((product)=>
-                    <li>
-                    <div className='product'>
-                        <img src={product.image} />
-                        <p>{product.title}</p>
-                        <div className='product-price'>
-                            <button>افزودن به سبد خرید</button>
-                            <div className='price'>{product.price}</div>
-                        </div>
-                    </div>
-                </li>
+                    props.item.map((item) =>
+                        <li key={item.id}>
+                            <div className='product'>
+                                <img src={item.image} />
+                                <p>{item.title}</p>
+                                <div className='product-price'>
+                                    <button onClick={() => props.addProducts(item)}>افزودن به سبد خرید</button>
+                                    <div className='price'>{item.price}</div>
+                                </div>
+                            </div>
+                        </li>
                     )
                 }
-                
-                
+
+
             </ul>
         </div>
     )
