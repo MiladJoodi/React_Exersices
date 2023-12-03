@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  body{
+     font-family: 'vazir' !important;
+     direction: rtl;
+     height: 100vh;
+  }
+  
+  section{
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #fff;
+     font-size: 45px;
+  }
+  
+  
+  #sectionOne{
+     background: #b71c1c;
+  }
+  
+  #sectionTwo{
+     background: #E65100;
+  }
+  
+  #sectionThree{
+     background: #33691E;
+  }
+  
+  #sectionFour{
+     background: #0D47A1;
+  }
+  
+  
+  .to-top{
+     position: fixed;
+     right: 25px;
+     bottom: 15px;
+     background: #fff;
+     width: 50px;
+     height: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50%;
+     -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+     -ms-border-radius: 50%;
+     -o-border-radius: 50%;
+     color: #000;
+     opacity: 0;
+     transition: all .4s ease-in-out;
+     -webkit-transition: all .4s ease-in-out;
+     -moz-transition: all .4s ease-in-out;
+     -ms-transition: all .4s ease-in-out;
+     -o-transition: all .4s ease-in-out;
+  }
+  
+  .to-top.active{
+     opacity: 1;
+     bottom: 40px;
+  }
+  
+  .to-top svg{
+     font-size: 30px;
+  }
+  
