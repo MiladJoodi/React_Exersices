@@ -1,15 +1,15 @@
 import { useState } from "react";
 import "./App.css";
+import Header from "./components/header/Header";
 
 
 function App() {
-
-
-
   return (
-    <div className="app">
+    <main>
+      <header className="header-big">
 
-    </div>
+      </header>
+    </main>
   );
 }
 
