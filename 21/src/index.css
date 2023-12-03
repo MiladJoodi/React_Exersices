@@ -1,13 +1,35 @@
+:root {
+  --font-family: "Poppins", sans-serif;
+  --dark-blue: #0a1930;
+  --light-blue: #1f93ff;
+  --color-white: #fff;
+  --dark-text: #333;
+  --form-button: #2da5ff;
+  --color-grey: #eae6eb;
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
 
-*{
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
   text-decoration: none;
   list-style: none;
   outline: none;
 }
+
+html {
+  font-size: 10px;
+}
+
 body {
   direction: rtl;
   font-family: 'vazir' !important;
 }
 
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
