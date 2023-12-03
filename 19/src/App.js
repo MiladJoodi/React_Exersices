@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 import axios from 'axios';
+import jsPDF from 'jspdf'
+import autoTable from 'jspdf-autotable'
+
 
 function App() {
 
@@ -15,6 +18,12 @@ function App() {
       })
   }
 
+  const download =()=>{
+    const pdf = new jsPDF();
+    pdf.autoTable({html: "#table"});
+    pdf.save("Msi.pdf")
+  }
+
 
   return (
     <div className="container">
@@ -26,11 +35,11 @@ function App() {
       {
         data.length > 0 && (
           <div className="download-data">
-            <button className="btn btn-primary">دانلود جدول</button>
+            <button className="btn btn-primary" onClick={download}>دانلود جدول</button>
 
             <h2 className="py-5">جدول اطلاعات</h2>
 
-            <table className="table table-borderless">
+            <table className="table table-borderless" id="table">
           <thead>
             <tr>
               <th>ID</th>
@@ -39,6 +48,15 @@ function App() {
             </tr>
           </thead>
           <tbody>
+            {
+              data.map((item)=> 
+              <tr key={item.id}>
+                <td>{item.id}</td>
+                <td>{item.title}</td>
+                <td>{String(item.completed)}</td>
+              </tr>
+              )
+            }
             <tr></tr>
           </tbody>
             </table>
