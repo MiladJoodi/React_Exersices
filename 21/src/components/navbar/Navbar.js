@@ -7,7 +7,7 @@ import { SiAnaconda } from "react-icons/si";
 
 const Navbar = () => {
 
-  const [showIcon, setShowIcon] = useState(true)
+  const [showIcon, setShowIcon] = useState(false)
 
   const toggleMenu = () => {
     setShowIcon(!showIcon)
@@ -35,8 +35,8 @@ const Navbar = () => {
       <div className='menu-icons' onClick={toggleMenu}>
         {
           showIcon ?
-            <AiOutlineBars size={35} color={"#fff"} cursor={'pointer'} /> :
-            <RiCloseLine size={35} color={'#fff'} cursor={'pointer'} />
+          <RiCloseLine size={35} color={'#fff'} cursor={'pointer'} /> :
+          <AiOutlineBars size={35} color={"#fff"} cursor={'pointer'} />
         }
       </div>
     </nav>

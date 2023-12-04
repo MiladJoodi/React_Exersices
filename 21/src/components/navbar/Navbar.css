@@ -63,8 +63,72 @@ a.btn-dark {
     .nav-links {
         display: none;
     }
-    .menu-icons{
+
+    .menu-icons {
         display: block;
     }
-    
+
+    .navbar #show-links-mobile,
+    .navbar #show-links-mobile-hide {
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #0a1930;
+        width: 100%;
+        border: 2px solid #fff;
+        transition: 0.3s ease;
+    }
+
+    .navbar #show-links-mobile li,
+    .navbar #show-links-mobile-hide li {
+        padding: 13px 0;
+        margin: 0 15px;
+        text-align: center;
+        border-bottom: 1px solid #fff;
+    }
+
+    .navbar #show-links-mobile li:last-child {
+        border-bottom: 0;
+    }
+
+    .navbar #show-links-mobile li a {
+        font-size: 17px;
+    }
+
+    .navbar #show-links-mobile li a:hover {
+        color: orangered;
+    }
+
+    .navbar #show-links-mobile {
+        animation: slide-in 0.5s ease-in-out;
+    }
+
+    .navbar #show-links-mobile-hide {
+        left: -100%;
+        animation: slide-out 0.5s ease-in-out
+    }
+
+    @keyframes slide-in {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(0);
+
+        }
+    }
+
+    @keyframes slide-out {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-100%);
+
+        }
+    }
+
 }
