@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const Download = () => {
-  return (
-    <div>Download</div>
-  )
+function Download() {
+  return <div>
+       دانلود
+  </div>;
 }
 
-export default Download
+export default Download;

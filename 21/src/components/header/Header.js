@@ -1,12 +1,10 @@
-import React from 'react'
-import './Header.css'
-import phoneHeader from '../../assets/phone-header-bg.png'
+import React from 'react';
+import phoneHeader from '../../assets/phone-header-bg.png';
+import './Header.css';
 import { BsMouse } from "react-icons/bs";
-
-
 const Header = () => {
   return (
-    <section id='header'>
+    <section id="header">
       <div className="container header">
         <div className="header-right">
           <h1>
@@ -14,23 +12,24 @@ const Header = () => {
             <span>امنیت در همه پلتفرم ها</span>
             <span>سیستم پیام رسانی</span>
           </h1>
-          <p>ارائه بهترین سرویس ها با بالاترین کیفیت و تضمین قیمت با خدمات و گارانتی پس از فروش</p>
+          <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p>
           <div className="header-btn">
-            <a href="" className='btn btn-dark'>بیاین شروع کنیم</a>
-            <a href="" className='btn btn-light'>چطوری کار میکنیم</a>
+            <a href="#" className="btn btn-dark">بیاین شروع کنیم</a>
+            <a href="#" className="btn btn-light">چجوری کار میکنیم</a>
           </div>
         </div>
         <div className="header-left">
-          <img src={phoneHeader} />
+          <img src={phoneHeader} alt="" />
         </div>
       </div>
 
-      <div className='floating-icon'>
-        <a href=""><BsMouse color={"#fff"} size={25} /></a>
+      <div className="floating-icon">
+        <a href="">
+          <BsMouse color={"#fff"} size={25} className="mouse" />
+        </a>
       </div>
-
     </section>
   )
-}
+};
 
-export default Header
+export default Header;

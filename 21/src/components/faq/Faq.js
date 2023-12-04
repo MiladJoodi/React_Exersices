@@ -1,10 +1,7 @@
+import React from 'react';
 
-import React from 'react'
-
-const Faq = () => {
-  return (
-    <div>Faq</div>
-  )
+function Faq() {
+  return <div>سوالات</div>;
 }
 
-export default Faq
+export default Faq;

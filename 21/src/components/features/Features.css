@@ -1,0 +1,14 @@
+.title{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.title h2{
+    font-size: 2rem;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: var(--dark-text);
+}
+.title p{
+    font-size: 1.4rem;
+    color: var(--dark-text);
+}
