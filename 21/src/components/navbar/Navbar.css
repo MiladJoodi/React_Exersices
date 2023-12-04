@@ -16,13 +16,6 @@
     font-weight: 300;
 }
 
-.nav-links a {
-    color: #fff;
-    font-size: 1.6rem;
-    text-decoration: none;
-    margin-right: 1rem;
-    transition: 0.3s ease;
-}
 
 .nav-links a:hover {
     color: orangered;
@@ -44,15 +37,6 @@
 .logo-text span {
     color: orangered;
     font-weight: 600;
-}
-
-a.btn {
-    border-radius: 5px;
-    padding: 5px 8px;
-}
-
-a.btn-dark {
-    border: 2px solid #fff;
 }
 
 .menu-icons {
