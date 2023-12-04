@@ -33,23 +33,38 @@
     align-items: center;
     justify-content: center;
 }
-.logo-text{
+
+.logo-text {
     font-size: 4rem;
     font-weight: 300;
     color: white;
     font-family: 'arial';
 }
-.logo-text span{
+
+.logo-text span {
     color: orangered;
     font-weight: 600;
 }
-a.btn{
+
+a.btn {
     border-radius: 5px;
     padding: 5px 8px;
 }
-a.btn-dark{
+
+a.btn-dark {
     border: 2px solid #fff;
 }
-.menu-icons{
+
+.menu-icons {
     display: none;
+}
+
+@media screen and (max-width : 600px) {
+    .nav-links {
+        display: none;
+    }
+    .menu-icons{
+        display: block;
+    }
+    
 }
