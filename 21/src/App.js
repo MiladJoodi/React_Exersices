@@ -1,14 +1,20 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./components/header/Header";
+import {Navbar,Header,Features,Download,Subscribe,Faq, Footer} from './components'
 
 
 function App() {
   return (
     <main>
-      <header className="header-big">
-
+      <header className="header-bg">
+        <Navbar />
+        <Header />
       </header>
+      <Features />
+      <Download />
+      <Subscribe />
+      <Faq />
+      <Footer />
     </main>
   );
 }

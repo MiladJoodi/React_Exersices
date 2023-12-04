@@ -1,7 +1,10 @@
+
 import React from 'react'
 
-export const Faq = () => {
+const Faq = () => {
   return (
     <div>Faq</div>
   )
 }
+
+export default Faq
