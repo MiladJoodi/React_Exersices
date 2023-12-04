@@ -26,6 +26,7 @@ html {
 body {
   direction: rtl;
   font-family: 'vazir' !important;
+  overflow-x: hidden;
 }
 
 .container {

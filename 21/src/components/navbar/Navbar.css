@@ -59,7 +59,7 @@ a.btn-dark {
     display: none;
 }
 
-@media screen and (max-width : 600px) {
+@media screen and (max-width : 650px) {
     .nav-links {
         display: none;
     }
