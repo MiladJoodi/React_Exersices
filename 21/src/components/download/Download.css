@@ -1,0 +1,38 @@
+#download{
+    background: linear-gradient(
+         90deg,
+         rgba(45, 165, 255, 1) 45%,
+         rgba(1, 223, 245, 1) 100%
+       );
+    text-align: center;
+    color: #fff;
+}
+
+.download-title{
+    padding-bottom: 3rem;
+}
+.download-title h2{
+    font-size: 3rem;
+    font-weight: 300;
+    position: relative;
+    padding-bottom: 2.5rem;
+}
+
+
+.download-title h2::before{
+    content: "";
+    position: absolute;
+    width: 10rem;
+    height: 1px;
+    background: #fff;
+    bottom: 10px;
+    right: 50%;
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+}
+.download-title p{
+    font-size: 1.2rem;
+}

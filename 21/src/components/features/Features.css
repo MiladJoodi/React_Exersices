@@ -59,7 +59,22 @@
     font-weight: 300;
     color: var(--light-blue)
 }
-.features-content .features-left .feature-text p{
+
+.features-content .features-left .feature-text p {
     font-size: 1.2rem;
     font-weight: 300;
+}
+
+@media screen and (max-width: 600px) {
+    .features-content {
+        flex-wrap: wrap;
+    }
+
+    .features-content .features-right {
+        width: 100%;
+    }
+
+    .features-content .features-left {
+        width: 100%;
+    }
 }

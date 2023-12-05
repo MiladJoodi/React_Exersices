@@ -8,7 +8,7 @@ import { BsHexagon } from "react-icons/bs";
 
 const Features = () => {
   return (
-    <section className='features'>
+    <section id='features'>
       <div className="container features">
         <div className='title'>
           <BsFillBookmarkCheckFill color='orangered' size="30" />
