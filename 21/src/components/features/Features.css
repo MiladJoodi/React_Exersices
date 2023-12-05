@@ -12,3 +12,19 @@
     font-size: 1.4rem;
     color: var(--dark-text);
 }
+.features-content{
+    display: flex;
+}
+.features-content .features-right{
+    width: 50%;
+}
+.features-content .features-right img{
+    width: 65%;
+}
+.features-content .features-left{
+    width: 50%;
+}
+.features-content .features-left .feature{
+    margin-bottom: 2rem;
+    display: flex;
+}
