@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import './Faq.css'
 import { MdOutlineLibraryBooks } from "react-icons/md";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { questions } from "./data.js";
 
 function Faq() {
+
+  const [showAnswer, setShowAnswer] = useState(false)
+
   return (
     <section id="faq">
       <div className="container faq">
@@ -20,15 +24,17 @@ function Faq() {
         <div className="questions">
           {
               questions && questions.map((question)=> 
-              <div className="question" key={question.id}>
+              <div className="question container" key={question.id}>
             <div className="question-title">
-              <h4>{question.title}</h4>
+              <h2>{question.title}</h2>
               <button>
-                <AiOutlinePlus />
+                <AiOutlinePlus color="#1f93ff" />
               </button>
             </div>
             <div className="question-answer">
-              <p>{question.answer}</p>
+              {
+                showAnswer && <p>{question.answer}</p>
+              }
             </div>
           </div>)
           }
