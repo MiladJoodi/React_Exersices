@@ -44,7 +44,10 @@ const Footer = () => {
             <p><FaGlobe /> &nbsp; وبسایت : www.example.com </p>
           </div>
         </div>
-        <div className="logo"></div>
+        <div className="footer-logo">
+          <img src={logo} />
+          <p>Copyright 2021.</p>
+        </div>
       </div>
     </section>
   );
