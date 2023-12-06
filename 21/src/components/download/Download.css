@@ -36,3 +36,29 @@
 .download-title p{
     font-size: 1.2rem;
 }
+.download-apps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.download-apps .download-app{
+    width: 12rem;
+    padding: 1rem;
+    border: 2px solid #fff;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 400px) {
+    .download-title h2{
+        font-size: 2rem;
+    }
+    .download-apps{
+        flex-wrap: wrap;
+    }
+    .download-apps .download-app{
+        width: 100%;
+        margin-top: 2rem;
+    }
+}

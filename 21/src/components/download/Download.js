@@ -8,7 +8,7 @@ function Download() {
     <section id='download'>
        <div className='container download'>
         <div className="download-title">
-          <h2>دانلود ااپلکیشن ما</h2>
+          <h2>دانلود اپلیکیشن ما</h2>
           <p>برنامه های ما برای دانلود در همه فرودشگاه ها موجود است.</p>
         </div>
         <div className='download-apps'>
