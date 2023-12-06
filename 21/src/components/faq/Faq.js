@@ -1,7 +1,11 @@
 import React from 'react';
 
 function Faq() {
-  return <div>سوالات</div>;
+  return (
+<section id>
+    
+    </section>
+  );
 }
 
 export default Faq;

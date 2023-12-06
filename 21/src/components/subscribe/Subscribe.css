@@ -50,5 +50,26 @@ form input{
 }
 .socials .social-icon svg{
     font-size: 2rem;
-    
+}
+@media screen and (max-width: 600px){
+    form input{
+        width: 100%;
+        border-radius: 5px;
+
+    }
+    form button{
+        width: 100%;
+        margin-bottom: 2rem;
+        border-radius: 5px;
+    }
+}
+@media screen and (max-width: 400px){
+    .socials{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .socials .social-icon{
+        width: 20%;
+        margin: 0;
+    }
 }
