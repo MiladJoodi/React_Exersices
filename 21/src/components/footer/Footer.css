@@ -1,0 +1,30 @@
+#footer{
+    background: var(--dark-blue);
+    color: #fff;
+}
+.footer{
+    display: flex;
+}
+.quick-access{
+    width: 20%;
+    background: blue;
+}
+.footer h4{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.footer .footer-links{
+    display: flex;
+    flex-direction: column;
+}
+.footer .footer-links a{
+    font-size: 1.2rem;
+}
+.support{
+    background: red;
+    width: 20%;
+}
+.contact{
+    width: 20%;
+    background: yellow;
+}
