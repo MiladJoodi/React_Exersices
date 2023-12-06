@@ -1,0 +1,28 @@
+#subcribe{
+    background: url(../../assets/subscribe-bg.png);
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.subscribe h2{
+    font-size: 3rem;
+    font-weight: 300;
+    padding-bottom: 3rem;
+
+}
+form>*{
+    font-family: 'vazir';
+}
+form button{
+    background: var(--form-button);
+    border: 2px solid var(--form-button);
+    padding: 1rem;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+}
+form input{
+    padding: 1rem;
+    width: 400px;
+
+}
