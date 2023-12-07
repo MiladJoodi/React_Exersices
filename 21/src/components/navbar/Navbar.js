@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { AiOutlineBars } from "react-icons/ai";
 import { RiCloseLine } from "react-icons/ri";
 import { SiAnaconda } from "react-icons/si";
 import './Navbar.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Navbar = () => {
   const [showIcon , setShowIcon] = useState(false);
@@ -11,15 +13,21 @@ const Navbar = () => {
     setShowIcon(!showIcon);
   }
 
+  useEffect(()=>{
+    AOS.init({
+      duration: 1000
+    });
+  },[])
+
   return (
     <nav className="navbar container">
       <div className="menu">
         <ul className="nav-links" id={showIcon ? "show-links-mobile" : "show-links-mobile-hide" }>
           <li><a href="" className="btn btn-dark">آموزش بیشتر</a></li>
-          <li><a href="">خانه</a></li>
-          <li><a href="">امکانات</a></li>
-          <li><a href="">دانلود</a></li>
-          <li><a href="">مشترک شوید</a></li>
+          <li><a href="#header">خانه</a></li>
+          <li><a href="#features">امکانات</a></li>
+          <li><a href="#download">دانلود</a></li>
+          <li><a href="#subscribe">مشترک شوید</a></li>
         </ul>
       </div>
       <div className="logo">

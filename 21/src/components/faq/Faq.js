@@ -1,16 +1,23 @@
-import React from "react";
+import React,{useEffect} from "react";
 import './Faq.css'
 import { MdOutlineLibraryBooks } from "react-icons/md";
 import { questions } from "./data.js";
 import Question from "./Question.js";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Faq() {
 
+  useEffect(()=>{
+    AOS.init({
+      duration: 1000
+    });
+  },[])
 
   return (
     <section id="faq">
       <div className="container faq">
-        <div className="faq-title">
+        <div className="faq-title" data-aos="fade-up">
           <MdOutlineLibraryBooks color="orangered" size={30} />
           <h2>سوالات متداول</h2>
           <p>
