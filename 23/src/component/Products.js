@@ -10,7 +10,7 @@ export default function Products() {
       <div className="products">
         {
             Data.map((item)=>{
-                <div className="products-item">
+                <div className="products-item" key={item.id}>
                     <img src={item.image} />
                     <div className="product-item-text">
                         <div className="product-item-info">
