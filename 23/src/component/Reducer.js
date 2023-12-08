@@ -8,6 +8,9 @@ const Reducer = (cart = [], action)=> {
             return cart;
         }
     }
+    if(action.type === "REMOVE"){
+        return cart.filter((item)=> item.id !== action.payload.id);
+    }
     return cart;
 }
 
