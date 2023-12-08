@@ -10,13 +10,19 @@ export default function Cart() {
   console.log(cart)
   const dispatch = useDispatch();
 
+  const addition = (acc, currentvalue)=> {
+    return acc + currentvalue.price * currentvalue.quantity
+  }
+
+  const total = cart.reduce(addition, 0);
 
   return (
     <>
       <Navbar />
       <div className="cart">
         {cart.map((item) => {
-          item.quantity = 1;
+          // item.quantity = 1;
+          console.log(item)
           return (
             <div className="cart-item" key={item.id}>
               <img src={item.image} />
@@ -28,15 +34,28 @@ export default function Cart() {
                   <button onClick={()=> dispatch({type: "REMOVE", payload: item})}>حذف از سبد</button>
                 </div>
                 <div className="add-to-cart">
-                  <button onClick={() => dispatch({ type: "ADD", payload: item })}>+</button>
+                  <button onClick={() => dispatch({ type: "INCREASE", payload: item })}>+</button>
                   <span>تعداد: {item.quantity}</span>
-                  <button onClick={() => dispatch({ type: "ADD", payload: item })}>-</button>
+                  <button onClick={() => {
+                    if(item.quantity > 1){
+                      dispatch({ type: "DECREASE", payload: item })
+                    }else{
+                      dispatch({ type: "REMOVE", payload: item })
+                    }
+                  }}>-</button>
                 </div>
               </div>
             </div>
           );
         })}
       </div>
+
+<div className="total">
+  {
+    total > 0 ? <p>مجموع قیمت: {formatCurrency(total)}</p> : <p>سبد خرید خالی است</p>
+  }
+</div>
+
     </>
   );
 }

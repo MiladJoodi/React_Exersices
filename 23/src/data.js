@@ -4,6 +4,7 @@ export const Data = [
          title: "شلوار اول",
          image: "/images/1.jpg",
          price: 120000,
+        //  quantity: 1
      },
      {
          id: 2,

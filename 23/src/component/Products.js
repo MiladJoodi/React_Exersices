@@ -15,6 +15,7 @@ export default function Products() {
       <Navbar />
       <div className="products">
         {Data.map((item) => {
+          item.quantity = 1;
           return (
             <div className="product-item" key={item.id}>
               <img src={item.image} />

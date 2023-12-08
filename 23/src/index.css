@@ -5,6 +5,9 @@
   list-style: none;
   outline: none;
 }
+button{
+  font-family: 'vazir';
+}
 body {
   direction: rtl;
   font-family: 'vazir' !important;
@@ -115,4 +118,21 @@ nav a{
   background: crimson;
   color: #fff;
   padding: 50px 0;
+}
+.right-navbar{
+  position: relative;
+}
+.notif{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 13px;
+  background-color: blue;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: -20px;
 }
