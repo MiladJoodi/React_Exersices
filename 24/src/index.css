@@ -4,6 +4,7 @@
   text-decoration: none;
   list-style: none;
   outline: none;
+  box-sizing: border-box;
 }
 body {
   direction: rtl;
