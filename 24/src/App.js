@@ -7,18 +7,13 @@ import { DataProvider } from "./component/Context";
 
 function App() {
   return (
-   <DataProvider>
-     <div className="main-website">
+   <div className="main-website">
       <div className="container">
         <BrowserRouter>
-          <Header />
-          <Routes>
-            <Route path="/products" element={<Products />}></Route>
-          </Routes>
+        <Header /> 
         </BrowserRouter>
       </div>
-    </div>
-   </DataProvider>
+   </div>
   );
 }
 
