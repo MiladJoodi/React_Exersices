@@ -1,5 +1,7 @@
 import React from 'react'
-import {Link} from 
+import {Link} from 'react-router-dom'
+import { FaShoppingBag } from "react-icons/fa";
+
 
 function Header() {
   return (
