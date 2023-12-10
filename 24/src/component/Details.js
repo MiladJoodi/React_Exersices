@@ -24,7 +24,7 @@ function Details() {
       {
         details.map(product=> (
           <div className="details" key={product._id}>
-                <div className='img-container' style={{backgroundImage: `url(${product.images[0]})`}}></div>
+                <div className='img-container' style={{backgroundImage: `url(${product.images[index]})`}}></div>
 
               <div className='box-details'>
                 <h2>{product.title}</h2>

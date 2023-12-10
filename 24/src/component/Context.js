@@ -75,7 +75,7 @@ export const DataProvider = (props) => {
       return product._id === id
     })
     
-    setCart([...cart, data])
+    setCart([...cart, ...data])
     console.log(cart);
     
   }
