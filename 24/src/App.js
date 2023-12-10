@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./component/Header";
 import Products from "./component/Products";
 import { DataProvider } from "./component/Context";
+import Details from "./component/Details";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 
             <Routes>
               <Route path="/products" element={<Products />}></Route>
+              <Route path="/products/:id" element={<Details />}></Route>
             </Routes>
 
           </BrowserRouter>
