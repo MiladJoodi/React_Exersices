@@ -71,19 +71,46 @@ export const DataProvider = (props) => {
   const [cart, setCart] = useState([])
 
   const addCart = (id)=>{
-    const data = products.filter((product)=> {
-      return product._id === id
+
+    const check = cart.every(item=> {
+        return item._id !== id
     })
+
+    if(check){
+      const data = products.filter((product)=> {
+        return product._id === id
+      })
+      setCart([...cart, ...data])
+    }else{
+      alert("Mojood ast")
+    }
     
-    setCart([...cart, ...data])
-    console.log(cart);
-    
+  }
+
+  const increase = (id)=>{
+    cart.forEach(item=>{
+      if(item._id === id){
+        item.count += 1;
+      }
+    })
+    setCart([...cart])
+  }
+
+  const decrease = (id)=>{
+    cart.forEach(item=>{
+      if(item._id === id){
+        item.count === 1 ? item.count = 1 : item.count -=1
+      }
+    })
+    setCart([...cart])
   }
 
   const value = {
     products: [products, setProducts],
     cart: [cart, setCart],
-    addCart: addCart, 
+    addCart: addCart,
+    increase: increase,
+    decrease: decrease,
   };
 
   return (
