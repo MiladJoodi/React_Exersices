@@ -5,6 +5,7 @@
   list-style: none;
   outline: none;
   box-sizing: border-box;
+  font-family: "vazir";
 }
 body {
   direction: rtl;
