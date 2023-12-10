@@ -6,6 +6,7 @@ import formatCurrency from '../util'
 function Products() {
   const value = useContext(DataContext);
   const [products, setProducts] = value.products;
+  const addCart = value.addCart
   
   // console.log(products);
 
@@ -24,7 +25,7 @@ function Products() {
               </h3>
               <p>{product.description}</p>
               <h4>{formatCurrency(product.price)}</h4>
-              <button>افزودن به سبد خرید</button>
+              <button onClick={()=> addCart(product._id)}>افزودن به سبد خرید</button>
             </div>
           </div>
         ))
