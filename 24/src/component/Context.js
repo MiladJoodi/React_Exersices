@@ -68,19 +68,21 @@ export const DataProvider = (props) => {
     },
   ]);
 
-  // const [cart, setCart] = useState([])
+  const [cart, setCart] = useState([])
 
   const addCart = (id)=>{
     const data = products.filter((product)=> {
       return product._id === id
     })
-
-    console.log(data)
+    
+    setCart([...cart, data])
+    console.log(cart);
+    
   }
 
   const value = {
     products: [products, setProducts],
-    // cart: [cart, setCart],
+    cart: [cart, setCart],
     addCart: addCart, 
   };
 
