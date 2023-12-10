@@ -105,12 +105,24 @@ export const DataProvider = (props) => {
     setCart([...cart])
   }
 
+  const removeProduct = (id)=> {
+    if(window.confirm('Are you sure?')){
+      cart.forEach((item,index)=>{
+        if(item._id === id){
+          cart.splice(index,1)
+        }
+      })
+      setCart([...cart])
+    }
+  }
+
   const value = {
     products: [products, setProducts],
     cart: [cart, setCart],
     addCart: addCart,
     increase: increase,
     decrease: decrease,
+    removeProduct: removeProduct,
   };
 
   return (
