@@ -25,7 +25,7 @@ function Header() {
       <div className='cart-icon'>
         <span>{cart.length}</span>
         <Link to="/cart">
-          <FaShoppingBag />
+          <FaShoppingBag size={'1.5rem'} />
         </Link>
       </div>
       <ul style={styleMenu}>

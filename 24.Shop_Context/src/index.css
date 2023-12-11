@@ -10,6 +10,7 @@
 body {
   direction: rtl;
   font-family: 'vazir' !important;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 .container{
@@ -36,7 +37,7 @@ header{
 
 a{
   color: #555;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 a:hover{
   color: rgb(87, 212, 243);
@@ -98,6 +99,7 @@ ul li{
 
 .card .box h4{
   color: crimson;
+  text-align: left;
 }
 
 .card .box button{
@@ -110,7 +112,8 @@ ul li{
   padding: 10px 0;
   margin: 10px 0;
   cursor: pointer;
-  letter-spacing: 2px;
+  border-radius: 5px;
+  /* letter-spacing: 1px; */
 }
 
 
