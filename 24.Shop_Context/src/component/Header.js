@@ -36,8 +36,8 @@ function Header() {
         <li><Link to="/">ثبت نام /ورود</Link></li>
         <li><img src={Close} width="30" className="menu" onClick={toggleMenu} /></li>
       </ul>
-      <div className='logo'>
-        <Link to="/">My Shop</Link>
+      <div className='logo' style={{fontSize: "24px"}}>
+        <Link className='title' to="/">My Shop</Link>
       </div>
       <div className='menu' onClick={toggleMenu}>
         <img src={Menu} width="30" />

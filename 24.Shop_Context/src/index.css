@@ -273,6 +273,9 @@ ul li{
   max-width: calc(100%);
   margin-top: 35px;
 }
+.logo{
+  background-color: red !important;
+}
 .menu{
   display: block;
   cursor: pointer;
