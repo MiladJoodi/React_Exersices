@@ -1,5 +1,5 @@
 ## Project 1
-Show/hide password input 
+Show/hide password inputs
    
 ### Cover:
 ![](https://s30.picofile.com/file/8469825892/show_hide.gif)
